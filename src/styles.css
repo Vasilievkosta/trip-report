@@ -373,3 +373,236 @@ img {
     order: 3;
   }
 }
+
+.trip-page__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.diary-button {
+  width: fit-content;
+  padding: 14px 22px;
+  border: 1px solid rgba(215, 193, 160, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.diary-button:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(215, 193, 160, 0.55);
+  transform: translateY(-1px);
+}
+
+.trip-page__hint {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.diary-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(8, 10, 11, 0.8);
+  backdrop-filter: blur(14px);
+  animation: fade-in 180ms ease;
+}
+
+.diary-modal__panel {
+  width: min(920px, 100%);
+  max-height: min(88vh, 980px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(24, 27, 29, 0.98), rgba(13, 15, 16, 0.98));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.diary-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 24px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.diary-modal__eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.diary-modal__header h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 500;
+}
+
+.diary-modal__close {
+  flex-shrink: 0;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.diary-modal__content {
+  overflow: auto;
+  padding: 28px 24px 36px;
+}
+
+.diary-markdown {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.diary-markdown h1,
+.diary-markdown h2,
+.diary-markdown h3 {
+  margin: 0 0 18px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.diary-markdown h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.diary-markdown h2 {
+  margin-top: 34px;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.diary-markdown h3 {
+  margin-top: 28px;
+  font-size: 1.2rem;
+}
+
+.diary-markdown p,
+.diary-markdown ul,
+.diary-markdown ol,
+.diary-markdown blockquote {
+  margin: 0 0 18px;
+}
+
+.diary-markdown ul,
+.diary-markdown ol {
+  padding-left: 1.4rem;
+}
+
+.diary-markdown li + li {
+  margin-top: 8px;
+}
+
+.diary-markdown strong {
+  color: #fffaf2;
+}
+
+.diary-markdown blockquote {
+  padding-left: 18px;
+  border-left: 2px solid rgba(215, 193, 160, 0.45);
+  color: var(--muted);
+}
+
+.diary-skeleton {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.diary-skeleton__line {
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.06));
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+.diary-skeleton__line--short {
+  width: 44%;
+}
+
+.diary-skeleton__line--medium {
+  width: 68%;
+}
+
+.diary-state {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 699px) {
+  .diary-modal {
+    padding: 0;
+  }
+
+  .diary-modal__panel {
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .diary-modal__header,
+  .diary-modal__content {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .diary-modal__header {
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+
+  .diary-markdown {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+}
