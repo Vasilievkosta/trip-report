@@ -9,6 +9,15 @@
     "imageCount": 45
   },
   {
+    "id": "carpathians-2019",
+    "title": "Карпаты 2019",
+    "year": 2019,
+    "description": "Интересно и познавательно пройтись по местам, немного с другой культурой и историей, у них даже время отличается на три часа, так им привычно.",
+    "diary": "/content/carpathians-2019.md",
+    "imageFolder": "carpathians-2019",
+    "imageCount": 59
+  },
+  {
     "id": "carpathians-2020",
     "title": "Карпаты 2020",
     "year": 2020,
