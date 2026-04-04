@@ -1,15 +1,15 @@
-import { trips } from '../data/trips'
-import { TripCard } from '../ui/TripCard'
+import { trips } from "../data/trips"
+import { TripCard } from "../ui/TripCard"
 
 export function HomePage() {
   return (
     <div className="home-page">
       <section className="hero">
         <p className="hero__eyebrow">Воспоминания в кадрах</p>
-        <h1>Походы, к которым хочется возвращаться тихо и неспешно.</h1>
+        <h1>Фото, к которым хочется возвращаться тихо и неспешно.</h1>
         <p className="hero__lead">
-          Здесь нет ленты новостей и спешки. Только маршруты, фотографии и
-          ощущение дороги, которое можно пересмотреть спустя время.
+          Здесь нет ленты новостей. Только маршруты, фотографии, которые можно пересмотреть спустя время. Ощущение пути
+          и красоты.
         </p>
       </section>
 

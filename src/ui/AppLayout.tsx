@@ -1,8 +1,8 @@
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Outlet, Link, useLocation } from "react-router-dom"
 
 export function AppLayout() {
   const location = useLocation()
-  const isHome = location.pathname === '/'
+  const isHome = location.pathname === "/"
 
   return (
     <div className="app-shell">
@@ -10,11 +10,9 @@ export function AppLayout() {
         <Link className="brand" to="/">
           Trip Report
         </Link>
-        <p className="brand-copy">
-          Архив походов, в который приятно возвращаться.
-        </p>
+        <p className="brand-copy">Архив фотографий некоторых наших походов.</p>
       </header>
-      <main className={isHome ? 'page page-home' : 'page'}>
+      <main className={isHome ? "page page-home" : "page"}>
         <Outlet />
       </main>
     </div>
