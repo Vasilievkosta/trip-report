@@ -9,6 +9,15 @@
     "imageCount": 54
   },
   {
+    "id": "carpathians-2017",
+    "title": "Карпаты 2017",
+    "year": 2017,
+    "description": "Говерла привлекает туристов не только как самая высокая вершина Украины (2061м), но и живописными окрестностями: лугами, истоками рек, водопадами.",
+    "diary": "/content/carpathians-2017.md",
+    "imageFolder": "carpathians-2017",
+    "imageCount": 37
+  },
+  {
     "id": "carpathians-2018",
     "title": "Карпаты 2018",
     "year": 2018,
